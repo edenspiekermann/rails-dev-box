@@ -120,9 +120,25 @@ package { ['libxml2', 'libxml2-dev', 'libxslt1-dev']:
   ensure => installed
 }
 
-# ExecJS runtime.
-package { 'nodejs':
-  ensure => installed
+# Node.js
+include apt
+
+exec { 'first update':
+  command => '/usr/bin/apt-get update'
+}
+
+apt::ppa { 'ppa:chris-lea/node.js':
+  require => Exec['first update'],
+}
+
+exec { 'second update':
+  command => '/usr/bin/apt-get update',
+  require => Apt::Ppa['ppa:chris-lea/node.js'],
+}
+
+package {  [ 'nodejs' ]:
+  ensure  => present,
+  require => Exec['second update'],
 }
 
 # --- Ruby ---------------------------------------------------------------------
