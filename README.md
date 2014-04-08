@@ -14,6 +14,8 @@ This project automates the setup of a development environment for working on Rub
 
 ## How To Build The Virtual Machine
 
+The only dependancy for installing vagrant and a virtual server is brew. Learn more about installing brew on this page (http://brew.sh)
+
 Building the virtual machine is this easy:
 
     host $ brew install brew-cask
