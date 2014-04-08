@@ -40,7 +40,7 @@ Port 3000 in the host computer is forwarded to port 3000 in the virtual machine.
 
 Once your connected via SSH:
     
-    client $ cd /host_system_user
+    vagrant@rails-dev-box:~$ cd /host_system_user
 
 Now you're in your host systems user folder. Now you can lookup wherever your git repositories live, cd into a project and you're able bundle and start your app.
 
