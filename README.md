@@ -15,7 +15,8 @@ This project automates the setup of a development environment for working on Rub
 ## How To Build The Virtual Machine
 
 Building the virtual machine is this easy:
-
+    host $ brew install brew-cask
+    host $ brew cask install virtualbox
     host $ git clone https://github.com/rails/rails-dev-box.git
     host $ cd rails-dev-box
     host $ vagrant up
