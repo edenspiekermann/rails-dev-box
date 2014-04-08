@@ -17,7 +17,7 @@ This project automates the setup of a development environment for working on Rub
 The only dependancy for installing vagrant and a virtual server is brew. Learn more about installing brew on this page (http://brew.sh)
 
 Building the virtual machine is this easy:
-
+    host $ brew tap phinze/cask
     host $ brew install brew-cask
     host $ brew cask install virtualbox
     host $ git clone https://github.com/rails/rails-dev-box.git
