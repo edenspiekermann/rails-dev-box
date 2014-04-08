@@ -22,6 +22,7 @@ Building the virtual machine is this easy:
     host $ cd rails-dev-box
     host $ vagrant up
 
+
 That's it.
 
 (If you want to use VMWare Fusion instead of VirtualBox, write `vagrant up --provider=vmware_fusion` instead of `vagrant up` when building the VM for the first time. After that, Vagrant will remember your provider choice, and you won't need to include the `provider` flag again.)
@@ -33,7 +34,13 @@ If the base box is not present that command fetches it first. The setup itself t
     ...
     vagrant@rails-dev-box:~$
 
-Port 3000 in the host computer is forwarded to port 3000 in the virtual machine. Thus, applications running in the virtual machine can be accessed via localhost:3000 in the host computer.
+Port 3000 in the host computer is forwarded to port 3000 in the virtual machine. Thus, applications running in the virtual machine can be accessed via localhost:3000 in the host computer. This also applies to Port 4567 (Middleman) and Port 5000 (Foreman)
+
+Once your connected via SSH:
+    
+    client $ cd /host_system_user
+
+Now you're in your host systems user folder. Now you can lookup wherever your git repositories live, cd into a project and you're able bundle and start your app.
 
 ## What's In The Box
 
