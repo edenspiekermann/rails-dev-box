@@ -22,6 +22,7 @@ Building the virtual machine is this easy:
     host $ brew install brew-cask
     host $ brew cask install virtualbox
     host $ brew cask install vagrant
+    host $ cd path_to_my_git_repo_folder
     host $ git clone https://github.com/rails/rails-dev-box.git
     host $ cd rails-dev-box
     host $ vagrant up
